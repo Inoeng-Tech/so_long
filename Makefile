@@ -6,34 +6,33 @@
 #    By: aafrida <aafrida@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/30 15:30:41 by aafrida           #+#    #+#              #
-#    Updated: 2022/04/30 16:47:52 by aafrida          ###   ########.fr        #
+#    Updated: 2022/05/21 13:53:39 by aafrida          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	=	so_long.a
-CC		=	gcc
-CFLAGS	=	-Wall -Werror -Wextra -Imlx
 
-SRCS	=	
+CFLAGS	=	-Wall -Werror -Wextra
 
-OBJS	=	
-RM		=	rm -rf
-OPTION 	=	-C 
+%.o: %.C
+			gcc $(CFLAGS) -Imlx -c $< -o $@
 
-all: $(NAME)
+SRC	=	
 
-$(NAME) :
-			$(OBJS) GNL(OBJS)
+so_long:	$(OBJS)
+					cd mlx && make
+					cd ft_printf && make
+					gcc $(OBJS) ft_printf/Libft/libft.a libxml.dzlib -o $@
 
+all: 		so_long
+ 
 clean	:
-			{RM} ${OBJS} $(BONUS_OBJS)
-
-			${RM} */*.o
+			cd xml && make clean
+			cd ft_printf && make clean
+			rm -ff $(OBJS)
 
 fclean	:	clean
-			${RM}
-			${RM} Libft/libft.a
-
+			rm -rf so_long
+			rm -rf ft_printf/Libft/libft.a
+			rm -rf libxml.a
 re	: fclean all
-
-PHONY: all clean fclean re

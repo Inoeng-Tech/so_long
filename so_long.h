@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afridasufi <afridasufi@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aafrida <aafrida@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 06:06:14 by afridasufi        #+#    #+#             */
-/*   Updated: 2022/05/07 06:24:32 by afridasufi       ###   ########.fr       */
+/*   Updated: 2022/05/22 15:25:52 by aafrida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include <mlx.h>
-# include "Libft/libft.h"
+# include "mlx.h/mlx.h"
+# include "get_next_line.h"
+# include "ft_printf/ft_printf.h"
 
 # define TILE_WIDTH 80
 
